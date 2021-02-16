@@ -1,0 +1,25 @@
+{
+  "name": "odp_todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "webpack-cli": "^4.5.0",
+    "webpack": "^5.22.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xavitron7/odp_todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xavitron7/odp_todo/issues"
+  },
+  "homepage": "https://github.com/Xavitron7/odp_todo#readme"
+}
