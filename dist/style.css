@@ -25,5 +25,14 @@ body {
     background-color: red;
     grid-area: 1 / 2 / 2 / 5;
 
-    
+}
+
+#project-info {
+    margin-bottom: 1rem;
+}
+
+.task {
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
 }
