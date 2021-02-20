@@ -5,10 +5,25 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Noto Sans JP', sans-serif;
+:root {
+    --background: #0B0C10;
+    --text: #C5C6C7;
+    --task-text: #45A29E;
+    --task-bg: #1F2833;
+    --bg-btn: #66FCF1;
+    --bg-btn-rm: #9F1020;
+    --bg-btn-rm-hv: #AA1020;
+    --pr-med: #999911;
 }
 
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--background);
+    color: var(--text)
+}
+.pr-medium {
+    color: var(--pr-med)
+}
 #container{
     display: grid;
     grid-template: 1fr / repeat(4, 1fr);
@@ -17,12 +32,11 @@ body {
 }
 
 #project-bar-div {
-    background-color: grey;
     grid-area: 1 / 1 / 2 / 2;
+    border-right: 2px solid grey;
 }
 
 #task-div {
-    background-color: red;
     grid-area: 1 / 2 / 2 / 5;
 
 }
@@ -32,7 +46,35 @@ body {
 }
 
 .task {
-    border: 2px solid black;
     display: flex;
     justify-content: space-between;
+    background-color: var(--task-bg);
+    color: var(--task-text);
+    padding: 1rem;
+    box-shadow: 7px 4px 5px var(--bg-btn);
+    margin: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
 }
+
+.task:hover {
+    padding: 1.25rem;
+    box-shadow: 7px 5px 5px var(--bg-btn)
+}
+
+.btn-remove {
+    display: inline-block;
+    align-self: center;
+    width: 5%;
+    padding: 0.5rem;
+    background-color: var(--bg-btn-rm);
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-remove:hover {
+    background-color: var(--bg-btn-rm-hv)
+}
+
