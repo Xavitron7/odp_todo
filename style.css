@@ -26,7 +26,7 @@ body {
 }
 #container{
     display: grid;
-    grid-template: 1fr / repeat(4, 1fr);
+    grid-template: 1fr / repeat(8, 1fr);
     height: 100vh;
 
 }
@@ -37,7 +37,7 @@ body {
 }
 
 #task-div {
-    grid-area: 1 / 2 / 2 / 5;
+    grid-area: 1 / 2 / 2 / 9;
 
 }
 
@@ -78,3 +78,56 @@ body {
     background-color: var(--bg-btn-rm-hv)
 }
 
+.btn-add {
+    padding: 0.5rem;
+    margin: 1rem;
+    background-color: var(--background);
+    color: var(--task-text);
+    border: 2px solid var(--bg-btn);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-add:hover {
+    border: 3px solid var(--bg-btn);
+}
+
+#project-name {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.task-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#project-info {
+    margin-left: 1rem;
+}
+
+#project-bar-div p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+}
+
+.project-item {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    line-height: 3rem;
+
+}
+
+.project-item:hover {
+    color: var(--task-text)
+}
+
+.btn-project {
+    width: 2vw;
+}
