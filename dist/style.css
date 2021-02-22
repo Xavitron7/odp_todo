@@ -16,6 +16,10 @@
     --pr-med: #999911;
 }
 
+.hidden {
+    display: none;
+}
+
 body {
     font-family: 'Noto Sans JP', sans-serif;
     background-color: var(--background);
@@ -63,15 +67,18 @@ body {
     box-shadow: 7px 5px 5px var(--bg-btn)
 }
 
+.btn {
+    cursor: pointer;
+    border: 0;
+}
+
 .btn-remove {
     display: inline-block;
     align-self: center;
     width: 5%;
     padding: 0.5rem;
     background-color: var(--bg-btn-rm);
-    border: 0;
     border-radius: 10px;
-    cursor: pointer;
 }
 
 .btn-remove:hover {
@@ -86,8 +93,7 @@ body {
     border: 2px solid var(--bg-btn);
     border-radius: 5px;
     font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .btn-add:hover {
@@ -130,4 +136,42 @@ body {
 
 .btn-project {
     width: 2vw;
+}
+
+#add-project-div {
+    width: 70vw;
+    border: 1px solid blue;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    padding: 1rem;
+    border: 2px solid var(--bg-btn);
+    background-color: var(--background);
+    border-radius: 5px;
+}
+
+.project-input {
+    width: 100%;
+    padding: 0.5rem;
+
+}
+
+
+
+
+#proj-input-div textarea {
+    height: 100%
+
+}
+
+#proj-button-div {
+    display: flex;
+    justify-content: center;
+}
+
+#proj-button-div button {
+
+    margin-left: 1rem;
+    padding: 0.5rem;
+
 }
