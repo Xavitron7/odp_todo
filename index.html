@@ -16,7 +16,7 @@
                     <li class="project-item">All</li>
                     <li class="project-item">Test <button class="btn btn-project btn-remove">X</button></li>
                 </ul>
-                <button class="btn btn-add">New Project</button>
+                <button class="btn btn-add" id="add-project">New Project</button>
             </div>
             <div id="task-div">
                 <div id="project-info">
@@ -36,11 +36,25 @@
                         <button class="btn btn-task btn-remove">X</button>
                     </article>           
                 </div>
-                <button class="btn btn-add">Add Task</button>                
+                <button class="btn btn-add">Add Task</button> 
+            </div>
+            <div id="add-project-div" class="hidden">
+                <h2>Add Project</h2>
+                <form id="add-project-form" method="POST" action="#">
+                    <div id="proj-input-div">
+                        <input type="text" placeholder="Project Title" required autofocus class="project-input" maxlength="15">
+                        <textarea placeholder="Project Description" required class="project-input" cols="1" rows="1"></textarea>
+                    </div>
+                    <div id="proj-button-div">
+                        <button class="btn btn-add" type="submit">Add</button>
+                        <button class="btn btn-remove" type="button" id="proj-div-close">Close</button>
+                    </div>
 
+                </form>
             </div>
 
 
         </div>
+        <script src="main.js"></script>
     </body>
 </html>
