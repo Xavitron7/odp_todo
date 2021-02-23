@@ -153,9 +153,9 @@ body {
 .project-input {
     width: 100%;
     padding: 0.5rem;
+    resize: none;
 
 }
-
 
 
 
@@ -175,3 +175,46 @@ body {
     padding: 0.5rem;
 
 }
+
+
+/*Tasks*/
+
+
+#add-task-div {
+    width: 50vw;
+    border: 1px solid blue;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    padding: 1rem;
+    border: 2px solid var(--bg-btn);
+    background-color: var(--background);
+    border-radius: 5px;
+}
+
+.task-input {
+    width: 100%;
+    padding: 0.5rem;
+    resize: none;
+
+}
+
+
+
+#task-input-div textarea {
+    height: 100%
+
+}
+
+#task-button-div {
+    display: flex;
+    justify-content: center;
+}
+
+#task-button-div button {
+
+    margin-left: 1rem;
+    padding: 0.5rem;
+
+}
+
