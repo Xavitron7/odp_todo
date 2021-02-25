@@ -1,7 +1,6 @@
-const addTask = (event) => {
+const addTask = () => {
     let addTaskDiv = document.querySelector("#add-task-div");
     let addTaskInputs = document.querySelectorAll(".task-input");
-    event.preventDefault()
     addTaskInputs.forEach(input => {
         input.value = ""
     }
