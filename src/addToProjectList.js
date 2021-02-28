@@ -14,8 +14,15 @@ const addToProjectList = (event) => {
 
     let savedProjects = localStorage.getItem("project-list")
     let projectlist = JSON.parse(savedProjects);
+    console.log(projectlist)
 
-    projectlist.push(newProject);
+    if (projectlist === null) {
+        projectlist = []
+    }
+
+
+   projectlist.push(newProject);
+   console.log(projectlist)
 
 
     addToLocalStorage("project-list", JSON.stringify(projectlist));
