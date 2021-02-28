@@ -1,7 +1,10 @@
 import addController from "./addcontroller.js";
 import closeButton from "./closebutton.js";
 import addToProjectList from "./addToProjectList.js"
+import getFromLocalStorage from "./getfromlocalstorage.js";
 
+//window.localStorage.clear()
+//console.log(window.localStorage)
 
 let projectAddButton = document.querySelector("#add-project");
 let projDivCloseButton = document.querySelector("#proj-div-close");
@@ -16,3 +19,7 @@ taskAddButton.addEventListener("click", addController);
 taskDivCloseButton.addEventListener("click", closeButton);
 
 addProjectForm.addEventListener("submit", addToProjectList);
+
+getFromLocalStorage();
+
+
