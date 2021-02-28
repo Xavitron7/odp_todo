@@ -22,7 +22,6 @@ const addToProjectList = (event) => {
 
 
    projectlist.push(newProject);
-   console.log(projectlist)
 
 
     addToLocalStorage("project-list", JSON.stringify(projectlist));
