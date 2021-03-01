@@ -12,9 +12,7 @@ const addToProjectList = (event) => {
         "project-desc": projectDesc.value
     };
 
-    let savedProjects = localStorage.getItem("project-list")
-    let projectlist = JSON.parse(savedProjects);
-    console.log(projectlist)
+    let projectlist = JSON.parse(localStorage.getItem("project-list"));
 
     if (projectlist === null) {
         projectlist = []
