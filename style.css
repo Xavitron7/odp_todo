@@ -46,7 +46,13 @@ body {
 }
 
 #project-info {
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 1rem;
+
+}
+
+#project-name, #project-desc {
+    width:50%;
+    display: inline-block;
 }
 
 .task {
@@ -100,6 +106,25 @@ body {
     border: 3px solid var(--bg-btn);
 }
 
+.btn-edit {
+    padding: 0.5rem;
+    background-color: var(--background);
+    color: var(--task-text);
+    border: 2px solid var(--bg-btn);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.1s;
+    display: relative;
+    left: 0;
+  
+    
+}
+
+.btn-edit:hover {
+    border: 3px solid var(--bg-btn);
+}
+
+
 #project-name {
     font-weight: bold;
     font-size: 1.4rem;
@@ -110,9 +135,6 @@ body {
     font-weight: bold;
 }
 
-#project-info {
-    margin-left: 1rem;
-}
 
 #project-bar-div p{
     font-size: 1.5rem;
