@@ -13,7 +13,7 @@
             <div id="project-bar-div">
                 <p>Projects</p>
                 <ul id="project-nav" class="nav project-nav">
-                    <li class="project-item">All</li>
+                    <li class="project-item" data-key="all">All</li>
                     <li class="project-item">Test <button class="btn btn-project btn-remove">X</button></li>
                 </ul>
                 <button class="btn btn-add" id="add-project">New Project</button>
@@ -81,6 +81,21 @@
 
                 </form>
             </div>
+            <div id="edit-project-div" class="hidden">
+                <h2>Add Project</h2>
+                <form id="edit-project-form" method="POST" action="#">
+                    <div id="proj-input-div">
+                        <input type="text" placeholder="Project Title" required autofocus class="project-input" maxlength="15" id="project-input-field">
+                        <textarea placeholder="Project Description" required class="project-input" cols="1" rows="1" id="project-desc-field"></textarea>
+                    </div>
+                    <div id="proj-button-div">
+                        <button class="btn btn-add" type="submit">Add</button>
+                        <button class="btn btn-remove" type="button" id="proj-div-close">Close</button>
+                    </div>
+
+                </form>
+            </div>
+
 
 
 
