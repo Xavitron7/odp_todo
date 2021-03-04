@@ -1,4 +1,5 @@
 import removeProject from "./removeproject.js";
+import changeProject from "./changeproject.js";
 
 // Array that was retrieved from local storaged used to generate the project list.
 
@@ -10,6 +11,8 @@ const renderProjects = (projectlist) => {
 //Creating the "All Projects link. Different from the user-added ones"
     let allLi = document.createElement("li");
     allLi.classList.add("project-item")
+    allLi.setAttribute("data-key", "all");
+    allLi.addEventListener("click", changeProject)
 
     let allText = document.createTextNode("All")
     allLi.appendChild(allText);
@@ -21,6 +24,7 @@ const renderProjects = (projectlist) => {
         let li = document.createElement("li");
         li.classList.add("project-item")
         li.setAttribute("data-key", project.id)
+        li.addEventListener("click", changeProject)
 
         let projName = document.createTextNode(project["project"]);
 
@@ -39,6 +43,7 @@ const renderProjects = (projectlist) => {
         projectNav.appendChild(li)        
         
     })
+
 }
 
 export default renderProjects;

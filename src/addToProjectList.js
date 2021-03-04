@@ -9,7 +9,7 @@ const addToProjectList = (event) => {
     let newProject = {
         "id": Date.now(),
         "project": projectName.value, 
-        "project-desc": projectDesc.value
+        "desc": projectDesc.value
     };
 
     let projectlist = JSON.parse(localStorage.getItem("project-list"));
