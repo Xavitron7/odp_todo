@@ -160,7 +160,7 @@ body {
     width: 2vw;
 }
 
-#add-project-div {
+#add-project-div, #edit-project-div {
     width: 70vw;
     border: 1px solid blue;
     position: absolute;
