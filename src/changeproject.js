@@ -3,6 +3,8 @@ import displayTasks from "./displaytasks.js";
 //If the "all" item was selected, pass "all" task text. Make sure target has a data key (i.e. not a button). This needs to be done because I've put the event listener on the li element. Else copy the project list from local storage, identify the project with the matching id, "remove" from array and set as own object. Pass object into displayTasks function.
 
 const changeProject = (event) => {
+    let editButton = document.querySelector("#edit-button");
+    let addButton = document.querySelector("#add-task")
 
     if (event.target.getAttribute("data-key") === null || event.target.getAttribute("data-key") === undefined) {
         return
@@ -10,6 +12,9 @@ const changeProject = (event) => {
 
 
     else if (event.target.getAttribute("data-key") === "all") {
+        editButton.classList.add("hidden");
+        addButton.classList.add("hidden");
+
         displayTasks({"id":"all", "project": "All Tasks", "desc": "All tasks are listed here"})
     }
 
@@ -26,7 +31,10 @@ const changeProject = (event) => {
 
 
 
-    displayTasks(targetProject)
+    displayTasks(targetProject);
+    if (editButton.classList.contains("hidden")) {editButton.classList.remove("hidden");};
+
+    if (addButton.classList.contains("hidden")) {addButton.classList.remove("hidden"); };
 
         }
 }
