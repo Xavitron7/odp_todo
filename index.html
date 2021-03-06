@@ -22,7 +22,7 @@
                 <div id="project-info">
                     <div id="project-name">Project Name</div>
                     <div id="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
-                    <button class="btn btn-edit">Edit</button>
+                    <button class="btn btn-edit" id="edit-button">Edit</button>
                 </div>
                 <div id="task-list">
                     <article class="task" data-key="1234" project="test">
@@ -37,7 +37,7 @@
                         <button class="btn btn-task btn-remove">X</button>
                     </article>           
                 </div>
-                <button class="btn btn-add" id="add-task">Add Task</button> 
+                <button class="btn btn-add hidden" id="add-task">Add Task</button> 
             </div>
             
             <div id="add-project-div" class="hidden">
@@ -75,7 +75,7 @@
                         </select>
                     </div>
                     <div id="task-button-div">
-                        <button class="btn btn-add" type="submit">Add</button>
+                        <button class="btn btn-add" type="submit" id="add-task">Add</button>
                         <button class="btn btn-remove" type="button" id="task-div-close">Close</button>
                     </div>
 
