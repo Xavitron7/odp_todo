@@ -15,7 +15,7 @@ const changeProject = (event) => {
         editButton.classList.add("hidden");
         addButton.classList.add("hidden");
 
-        displayTasks({"id":"all", "project": "All Tasks", "desc": "All tasks are listed here"})
+        displayTasks({"id":"all", "project": "All Tasks", "desc": "All tasks are listed here", "tasks": []})
     }
 
     else {

@@ -26,4 +26,5 @@ addTaskForm.addEventListener("submit", addTaskToProjectList);
 
 getFromLocalStorage();
 
+//Remaining tasks: Function that renders tasks after they're added, way to remove tasks, display all tasks function.
 

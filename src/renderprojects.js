@@ -1,12 +1,15 @@
 import removeProject from "./removeproject.js";
 import changeProject from "./changeproject.js";
+//import renderTasks from "./rendertasks.js";
 
 // Array that was retrieved from local storaged used to generate the project list.
 
 const renderProjects = (projectlist) => {
 
     let projectNav = document.querySelector("#project-nav");
+    //let taskList = document.querySelector("#task-list")
     projectNav.innerHTML = ""
+    //taskList.innerHTML = "";
 
 //Creating the "All Projects link. Different from the user-added ones"
     let allLi = document.createElement("li");
@@ -43,6 +46,8 @@ const renderProjects = (projectlist) => {
         projectNav.appendChild(li)        
         
     })
+
+    //renderTasks(projectlist)
 
 }
 
