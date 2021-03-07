@@ -38,6 +38,7 @@ const displayTasks = ({id, project, desc, tasks}) => {
 
         //Adding classes and events
         taskDiv.classList.add("task");
+        taskDiv.setAttribute("data-key", task.id)
         taskTitle.classList.add("task-title")
         taskDesc.classList.add("task-desc")
         taskDate.classList.add("due-date")
