@@ -1,4 +1,5 @@
 import addToLocalStorage from "./addtolocalstorage";
+import updateTasks from "./updatetasks.js"
 
 const removeTaskFromList = (event) => {
 let currentProjectDiv = document.querySelector("#project-name")
@@ -13,6 +14,7 @@ let currentProject = projectlist.filter(project => project.id === Number(current
 currentProject.tasks = currentProject.tasks.filter(task => task.id !== Number(currentTaskID))
 //console.log(currentProject.tasks)
 addToLocalStorage("project-list", JSON.stringify(projectlist))
+updateTasks(Number(currentProjectID))
 
 }
 
