@@ -1,6 +1,6 @@
 import removeProject from "./removeproject.js";
 import changeProject from "./changeproject.js";
-//import renderTasks from "./rendertasks.js";
+import renderAllTasks from "./renderalltasks.js";
 
 // Array that was retrieved from local storaged used to generate the project list.
 
@@ -16,6 +16,7 @@ const renderProjects = (projectlist) => {
     allLi.classList.add("project-item")
     allLi.setAttribute("data-key", "all");
     allLi.addEventListener("click", changeProject)
+    allLi.addEventListener("click", renderAllTasks)
 
     let allText = document.createTextNode("All")
     allLi.appendChild(allText);

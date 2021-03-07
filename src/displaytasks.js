@@ -1,4 +1,4 @@
-
+import removeTaskFromList from "./removetaskfromlist.js"
 //Takes the value of the id, project and desc keys in an object and changes the text of the project info section based on those values
 const displayTasks = ({id, project, desc, tasks}) => {
     
@@ -36,7 +36,7 @@ const displayTasks = ({id, project, desc, tasks}) => {
 
         remButton.innerHTML = "X"
 
-        //Adding classes
+        //Adding classes and events
         taskDiv.classList.add("task");
         taskTitle.classList.add("task-title")
         taskDesc.classList.add("task-desc")
@@ -47,6 +47,7 @@ const displayTasks = ({id, project, desc, tasks}) => {
         remButton.classList.add("btn-remove")
         remButton.classList.add("btn-task")
         remButton.classList.add("btn");
+        remButton.addEventListener("click", removeTaskFromList)
 
         if (task.priority === "high") {taskPrio.classList.add("pr-high") }
         else if (task.priority === "medium") {taskPrio.classList.add("pr-medium") }

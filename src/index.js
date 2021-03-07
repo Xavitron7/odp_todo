@@ -3,6 +3,7 @@ import closeButton from "./closebutton.js";
 import addToProjectList from "./addToProjectList.js";
 import addTaskToProjectList from "./addtasktoproject.js"
 import getFromLocalStorage from "./getfromlocalstorage.js";
+import renderAllTasks from "./renderalltasks.js"
 
 //window.localStorage.clear()
 //console.log(window.localStorage)
@@ -25,6 +26,7 @@ addProjectForm.addEventListener("submit", addToProjectList);
 addTaskForm.addEventListener("submit", addTaskToProjectList);
 
 getFromLocalStorage();
+renderAllTasks();
 
 //Remaining tasks: Function that renders tasks after they're added, way to remove tasks, display all tasks function.
 
