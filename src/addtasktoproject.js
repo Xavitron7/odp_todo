@@ -1,10 +1,12 @@
 //This function is triggered by a submit event on the task add form
 
 import addToLocalStorage from "./addtolocalstorage";
+import updateTasks from "./updatetasks.js";
 
 const addTaskToProjectList = (event) => {
     event.preventDefault();
     let projectNameDiv = document.querySelector("#project-name");
+    let currentProjectID = projectNameDiv.getAttribute("data-key")
     let titleInput = document.querySelector("#task-title")
     let descInput = document.querySelector("#task-description")
     let dateInput = document.querySelector("#task-date");
@@ -24,7 +26,7 @@ const addTaskToProjectList = (event) => {
 
     for (let project of projectlist) {
 
-        if (project.id === Number(projectNameDiv.getAttribute("data-key"))) {
+        if (project.id === Number(currentProjectID)) {
             project.tasks.push(newTask)
         }
 
@@ -37,7 +39,8 @@ const addTaskToProjectList = (event) => {
     dateInput.value = ""
     priorityInput.value = ""
 
-    console.log(projectlist)
+    updateTasks(currentProjectID)
+
   
 
 
