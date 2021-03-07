@@ -1,6 +1,5 @@
 import removeTaskFromList from "./removetaskfromlist.js";
-import updateTasks from "./updatetasks.js"
-//Takes the value of the id, project and desc keys in an object and changes the text of the project info section based on those values
+//Takes the value of the id, project and desc keys in an object and changes the text of the project info section based on those values. Also renders tasks.
 const displayTasks = ({id, project, desc, tasks}) => {
     
     let projectNameDiv = document.querySelector("#project-name");
@@ -70,8 +69,6 @@ const displayTasks = ({id, project, desc, tasks}) => {
 
         taskList.appendChild(taskDiv)
     })
-
-    //updateTasks(currentProjectID)
 
 }
 

@@ -1,3 +1,5 @@
+//This is the function that displays every task in every project on the "all" screen. Loops through every project and pushes every task to the alltasks array. The alltasks array is then used to render the task objects.
+
 const renderAllTasks = () => {
         let taskList = document.querySelector("#task-list");
 
@@ -8,25 +10,13 @@ const renderAllTasks = () => {
         //Going into each project's tasks and pushing the tasks into a new, separate array
 
         allProjects.forEach(project => {
-                let projectTasks = project.tasks;
-                
-                for (let task of projectTasks) {
-                        allTasks.push(task)
-
-                }
-                //console.log(allTasks)
-
+                let projectTasks = project.tasks;                
+                for (let task of projectTasks) {allTasks.push(task)};
 
         })
-        
-
-
 
         allTasks.forEach(taskObject =>  {
 
-                //console.log(taskObject)
-
-                
                 //Divs and buttons
                 let taskDiv = document.createElement("article");
                 let taskInfo = document.createElement("div");
@@ -73,10 +63,7 @@ const renderAllTasks = () => {
         
                 taskDiv.appendChild(taskInfo)
                 taskDiv.appendChild(taskPrioDiv)
-                taskDiv.appendChild(remButton)
-        
-        
-        
+                taskDiv.appendChild(remButton)       
                 taskList.appendChild(taskDiv)
             })
 

@@ -1,4 +1,4 @@
-//This function is triggered by a submit event on the task add form
+//This function is triggered by a submit event on the task add form. Adds the values of the form to an object and adds them to the task array of the current project. Adds the updated project list to local storage and re-renders the task list.
 
 import addToLocalStorage from "./addtolocalstorage";
 import updateTasks from "./updatetasks.js";

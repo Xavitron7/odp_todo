@@ -1,3 +1,4 @@
+//Opens the add task div
 const addTask = () => {
     let addTaskDiv = document.querySelector("#add-task-div");
     let addTaskInputs = document.querySelectorAll(".task-input");
